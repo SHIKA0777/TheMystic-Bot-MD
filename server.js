@@ -9,7 +9,7 @@ function connect(conn, PORT) {
   const app = global.app = express();
   console.log(app);
   const server = global.server = createServer(app);
-  let _qr = 'El código QR es invalido, posiblemente ya se escaneo el código QR.';
+  let _qr = 'كود QR غير صالح، يمكنك مسح كود QR.';
 
   conn.ev.on('connection.update', function appQR({qr}) {
     if (qr) _qr = qr;
